@@ -1,0 +1,21 @@
+<div class="container py-3">
+    <div class="row pt-5 pb-3">
+      <div class="col-12">
+        <div class="row" *ngIf="postsList">
+          <div *ngFor="let post of displayPostList" class="card col-10 shadow-sm mx-auto my-1">
+            <div class="card-body">
+              <h5 class="card-title"><a [routerLink]="['/post', post.id]">{{post.title}}</a></h5>
+              <p class="card-text"> {{ (post.body.length>45)? (post.body | slice:0:45)+'...':(post.body) }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-10 mx-auto">
+            <mat-paginator [length]="postsListLenght" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions"
+              (page)="onChangedPage($event)">
+            </mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
