@@ -13,6 +13,8 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { FormsModule } from '@angular/forms';
 import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+import { MatProgressSpinnerModule } from '@angular/material';
+
 
 const FIREBASE_CONFIG = environment.firebaseConfig;
 
@@ -31,6 +33,7 @@ const FIREBASE_CONFIG = environment.firebaseConfig;
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFirestoreModule,
     AppRoutingModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
     MatPaginatorModule,
   ],

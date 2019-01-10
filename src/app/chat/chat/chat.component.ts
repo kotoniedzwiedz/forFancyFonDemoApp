@@ -30,6 +30,7 @@ export class ChatComponent implements OnInit {
       body: form.value.body,
       user: form.value.user
     });
+    form.reset();
     this.chatService.addMessage(message);
   }
 
