@@ -2,11 +2,13 @@ import { NgModule } from '../../node_modules/@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PostListComponent } from './Posts/post-list/post-list.component';
 import { PostComponent } from './Posts/post/post.component';
+import { ChatComponent } from './chat/chat/chat.component';
 
 
 const routes: Routes = [
   { path: '', component: PostListComponent },
   { path: 'post/:id', component: PostComponent },
+  { path: 'chat', component: ChatComponent },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 

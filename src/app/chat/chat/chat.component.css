@@ -1,0 +1,13 @@
+.message-table {
+  min-height: 300px;
+}
+textarea {
+  resize: none;
+}
+.btn {
+  background: #0094EB;
+}
+
+.btn:hover {
+  background-color: #00A8FF;
+}
