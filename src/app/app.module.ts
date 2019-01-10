@@ -8,23 +8,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { MatPaginatorModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { ChatComponent } from './chat/chat/chat.component';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { FormsModule } from '@angular/forms';
+import { AngularFirestoreModule, AngularFirestore } from 'angularfire2/firestore';
+import { MatProgressSpinnerModule } from '@angular/material';
+
+
+const FIREBASE_CONFIG = environment.firebaseConfig;
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponent,
     PostComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFirestoreModule,
     AppRoutingModule,
+    MatProgressSpinnerModule,
     HttpClientModule,
     MatPaginatorModule,
-
   ],
-  providers: [],
+  providers: [AngularFirestore],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
