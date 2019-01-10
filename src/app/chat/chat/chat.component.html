@@ -12,6 +12,12 @@
             </div>
           </div>
         </div>
+        <div class="col-12 text-center">
+            <h3 *ngIf="messages.length===0">Any messages yet!</h3>
+        </div>
+      </div>
+      <div class="col-12 text-center">
+          <mat-spinner *ngIf="!(messages$ | async)" class="mx-auto"></mat-spinner>
       </div>
     </div>
     <div class="col-12 col-md-6 mx-auto my-5 p-2">
