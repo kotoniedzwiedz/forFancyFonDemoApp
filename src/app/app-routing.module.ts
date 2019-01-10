@@ -1,7 +1,7 @@
 import { NgModule } from '../../node_modules/@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PostListComponent } from './posts/post-list/post-list.component';
-import { PostComponent } from './posts/post/post.component';
+import { PostListComponent } from './Posts/post-list/post-list.component';
+import { PostComponent } from './Posts/post/post.component';
 
 
 const routes: Routes = [
