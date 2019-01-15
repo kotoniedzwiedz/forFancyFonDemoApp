@@ -21,7 +21,7 @@ export class ChatService {
   addMessage(message: Message) {
     console.log(message);
     this.messagesCollection.doc(message.id).set(message);
-  }
+    }
 
   createId(): string {
     return this.afs.createId();

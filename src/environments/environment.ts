@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  url: 'http://jsonplaceholder.typicode.com/',
+  url: 'https://jsonplaceholder.typicode.com/',
   firebaseConfig: {
     apiKey: 'AIzaSyBy3jQxKgZ88PA9I6GXHT_cVABbgQ5dEug',
     authDomain: 'forfancyfondemoapp.firebaseapp.com',
